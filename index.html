@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Angel Konan</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:"Noto Serif Devanagari", serif;
+
+    background:
+    linear-gradient(135deg,#ffb3d9,#ff8fc2,#ff74b5);
+}
+
+/* Dark effect */
+
+body::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.18);
+}
+
+/* Floating symbols */
+
+.symbol{
+    position:absolute;
+    top:-50px;
+    font-size:26px;
+    opacity:0.85;
+    z-index:1;
+    animation:fall 12s linear infinite;
+}
+
+@keyframes fall{
+
+    from{
+        transform:translateY(-100px) rotate(0deg);
+    }
+
+    to{
+        transform:translateY(110vh) rotate(360deg);
+    }
+}
+
+/* Main Card */
+
+.card{
+
+    position:relative;
+    z-index:2;
+
+    width:370px;
+    max-height:92vh;
+
+    overflow:auto;
+
+    padding:28px;
+
+    border-radius:30px;
+
+    background:rgba(18,18,28,0.82);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+    0 0 30px rgba(0,0,0,0.4);
+
+    text-align:center;
+}
+
+/* Scrollbar */
+
+.card::-webkit-scrollbar{
+    width:5px;
+}
+
+.card::-webkit-scrollbar-thumb{
+    background:#ff78bc;
+    border-radius:10px;
+}
+
+/* Photo Space */
+
+.photo-space{
+
+    width:200px;
+    height:240px;
+
+    margin:auto;
+    margin-bottom:20px;
+
+    border-radius:25px;
+
+    border:3px dashed #8eb7ff;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:#dbe7ff;
+    font-size:18px;
+
+    background:rgba(255,255,255,0.05);
+
+    box-shadow:
+    0 0 18px rgba(142,183,255,0.3);
+}
+
+/* Title */
+
+h1{
+
+    color:#8eb7ff;
+
+    font-size:36px;
+
+    margin-bottom:10px;
+
+    text-shadow:
+    0 0 14px rgba(142,183,255,0.7);
+}
+
+/* Subtitle */
+
+.subtitle{
+
+    color:#ff7272;
+
+    letter-spacing:3px;
+
+    margin-bottom:24px;
+
+    font-size:14px;
+}
+
+/* Shayari */
+
+.shayari{
+
+    color:#f7f2f5;
+
+    font-size:18px;
+
+    line-height:2;
+
+    text-align:center;
+}
+
+/* Colors */
+
+.blue{
+    color:#8eb7ff;
+    font-weight:bold;
+}
+
+.red{
+    color:#ff7272;
+    font-weight:bold;
+}
+
+.orange{
+    color:#ffbe5c;
+    font-weight:bold;
+}
+
+.pink{
+    color:#ff93cb;
+    font-weight:bold;
+}
+
+/* Floating paper */
+
+.paper{
+
+    position:absolute;
+
+    top:18px;
+    right:18px;
+
+    font-size:26px;
+
+    animation:float 4s infinite ease-in-out;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* Button */
+
+button{
+
+    margin-top:28px;
+
+    padding:12px 25px;
+
+    border:none;
+
+    border-radius:20px;
+
+    background:#5f90ff;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+button:hover{
+
+    background:#7aa7ff;
+
+    transform:scale(1.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Floating Symbols -->
+
+<div class="symbol" style="left:10%; color:#ff5b5b;">☁</div>
+<div class="symbol" style="left:25%; color:#8eb7ff; animation-delay:2s;">✦</div>
+<div class="symbol" style="left:45%; color:white; animation-delay:4s;">🪽</div>
+<div class="symbol" style="left:65%; color:#ffbe5c; animation-delay:1s;">✧</div>
+<div class="symbol" style="left:85%; color:#ff5b5b; animation-delay:3s;">☁</div>
+
+<!-- Main Card -->
+
+<div class="card">
+
+    <div class="paper">📄</div>
+
+    <!-- यहाँ फोटो लगाना -->
+    <div class="photo-space">
+        यहाँ Konan की फोटो लगाओ 🌸
+    </div>
+
+    <h1>Angel Konan</h1>
+
+    <div class="subtitle">
+        बारिश • खामोशी • कागज़
+    </div>
+
+    <div class="shayari">
+
+        <span class="blue">🌧️ कुछ लोग बारिश जैसे होते हैं...</span><br>
+        बाहर से शांत,<br>
+        मगर अंदर पूरा तूफ़ान छुपाए हुए ✨<br><br>
+
+        वो लड़की भी ऐसी ही थी...<br>
+        <span class="pink">
+        जिसके हाथों में सिर्फ कागज़ थे,
+        </span><br>
+        मगर दिल में अधूरी दुनिया 🪽<br><br>
+
+        <span class="red">☁ दर्द ने उसे मजबूत बनाया ☁</span><br>
+        और खामोशी ने उसे अलग...<br><br>
+
+        उसने कभी ऊँची आवाज़ में<br>
+        अपने जज़्बात नहीं बताए 🌸<br><br>
+
+        बस बारिश के बीच<br>
+        चुपचाप उड़ते रहे उसके कागज़ 📄<br><br>
+
+        <span class="blue">
+        लोग उसे समझ नहीं पाए...
+        </span><br>
+        क्योंकि वो मुस्कुराकर भी<br>
+        अपने अंदर दर्द छुपा लेती थी 🌧️<br><br>
+
+        <span class="orange">
+        “कुछ कहानियाँ शब्दों से नहीं,<br>
+        सिर्फ एहसासों से समझ आती हैं...” 🪽
+        </span>
+
+    </div>
+
+    <button onclick="showMsg()">
+        एक याद 🌸
+    </button>
+
+</div>
+
+<script>
+
+function showMsg(){
+
+    alert("कुछ लोग कभी पूरी तरह जाते नहीं... वो बारिश बनकर रह जाते हैं 🌧️");
+
+}
+
+</script>
+
+</body>
+</html>
